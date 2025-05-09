@@ -1,0 +1,119 @@
+/* استایل های عمومی */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('fortnite-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* استایل کارت اکانت ها */
+.account-card {
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.account-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.account-card .card-body {
+    padding: 20px;
+}
+
+.account-card .btn-buy {
+    background-color: #ff4757;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.account-card .btn-buy:hover {
+    background-color: #ff6b81;
+    transform: scale(1.05);
+}
+
+/* استایل دکمه ها */
+.btn {
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* استایل لوگو مرورگر روی دکمه ها */
+.btn-with-browser {
+    position: relative;
+    padding-left: 45px;
+}
+
+.btn-with-browser::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn-chrome::before {
+    background-image: url('chrome-icon.png');
+}
+
+.btn-firefox::before {
+    background-image: url('firefox-icon.png');
+}
+
+.btn-edge::before {
+    background-image: url('edge-icon.png');
+}
+
+/* انیمیشن ها */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* طراحی ایرانی */
+.persian-pattern {
+    background-image: url('persian-pattern.png');
+    background-repeat: repeat;
+    background-size: 200px;
+    background-color: #f8f9fa;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .account-card {
+        margin-bottom: 15px;
+    }
+}
